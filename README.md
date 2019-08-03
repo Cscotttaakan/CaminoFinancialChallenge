@@ -107,20 +107,5 @@ Password : password
   GET https://stark-refuge-31370.herokuapp.com/status/?id={AppID}
   returns
   ```
-      {
-          "count": <NUMBER_OF_REQUESTS>
-          "next": null
-          "prev": null
-          "results": <LIST_OF_REQUESTS> [
-            {
-              "mentee": <MENTEE_INFO>
-              "mentor": <MENTOR_INFO>
-              "email_body": "<MESSAGE_FROM_MENTEE>"
-              "preferred_mentee_email": "<REPLY_EMAIL>"
-              "phone": "<OPTIONAL_MENTEE_PHONE>"
-              "date_created": "<DATE_OF_REQUEST>"
-            }
-            ...
-          ]
-      }
+      {"Status":"Pending"}
   ```
