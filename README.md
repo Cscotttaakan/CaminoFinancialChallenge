@@ -15,7 +15,7 @@ Completed.
 
 ### Observing DB Changes Through Admin Page
 There are no retrieve and destroy endpoints, so the Django Admin page will suffice in observing DB changes.
-https://stark-refuge-31370.herokuapp.com/loanapp/admin/
+https://stark-refuge-31370.herokuapp.com/admin/
 User : admin
 Password : password
 
