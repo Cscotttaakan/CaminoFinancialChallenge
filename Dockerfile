@@ -22,6 +22,9 @@ RUN pip install -r requirements.txt
 # copy project
 COPY LoanApplication . 
 
+RUN python manage.py makemigrations && python manage.py migrate
+RUN python manage.py collectstatic --noinput
+
 # add and run as non-root user
 RUN adduser -D myuser
 USER myuser
