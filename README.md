@@ -6,20 +6,20 @@
 1. Need one endpoint called loanapp/ to take application. Should be able to consume this json.\
 Completed.
 2. Need one endpoint called status/ to provide a status on an application submitted given a loanapp id. Be creative about the status to return.
-Completed.\ 
+Completed.  
 Unsure about the "creative" portion as the data is not manipulated. The application would technically always be pending, unless some criteria for acceptance or rejection were supplied.
-3. Develop some kind of algorithm to recognize duplicates in app submissions. A person could submit now on the phone and later on a desktop. A person could submit a new app 4 months down the road with almost the same information but a new mobile number. When a duplicate is found, the key thing to do is to update the original record and not to overwrite. And allow some ways to make note of this. It also removes duplicates in owners, searching for unique names and birthdate.
-\Django's Object.create_or_update function works well for this. I didn't analyze the run time of the function, but it seems to serve its purpose. There is an updated field on the application that shows when it was last updated. I'm sure there could be a more robust way to track changes.
+3. Develop some kind of algorithm to recognize duplicates in app submissions. A person could submit now on the phone and later on a desktop. A person could submit a new app 4 months down the road with almost the same information but a new mobile number. When a duplicate is found, the key thing to do is to update the original record and not to overwrite. And allow some ways to make note of this. It also removes duplicates in owners, searching for unique names and birthdate.  
+Django's Object.create_or_update function works well for this. I didn't analyze the run time of the function, but it seems to serve its purpose. There is an updated field on the application that shows when it was last updated. I'm sure there could be a more robust way to track changes.
 4. Be mindful that each business can have one or multiple business owners.
-Save data in models.\
+Save data in models.  
 Completed.
 
 ### Observing DB Changes Through Admin Page
 There are no retrieve and destroy endpoints, so the Django Admin page will suffice in observing DB changes.
 https://stark-refuge-31370.herokuapp.com/admin/
-\
+  
 User : admin
-\
+  
 Password : password
 
 ### Create Loan Application
