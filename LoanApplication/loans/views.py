@@ -9,6 +9,11 @@ from .models import *
 
 
 class CreateLoanApplicationView(generics.CreateAPIView):
+    '''
+    Basic idea is to flatten the nested dictionaries and join them to allow the
+    update_or_create handle the heavy lifting.
+    update_or_create handles the duplicate applications.
+    '''
     def post(self, request):
         new_app_data = {**request.data['CFApplicationData'],**request.data['RequestHeader']}
         new_app,app_created = Application.objects.update_or_create(CFRequestId=new_app_data.pop('CFRequestId'),defaults=new_app_data)
